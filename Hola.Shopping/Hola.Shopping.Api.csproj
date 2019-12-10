@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>5e49a440-e36c-492e-906d-60ae76463138</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="MapperProfiles\SizeResolver.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="AutoWrapper.Core" Version="2.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.9.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc4" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hola.Shopping.Api.Application.Implementation\Hola.Shopping.Api.Application.Implementation.csproj" />
+    <ProjectReference Include="..\Hola.Shopping.Api.Data.Implementation\Hola.Shopping.Api.Data.Implementation.csproj" />
+  </ItemGroup>
+</Project>
