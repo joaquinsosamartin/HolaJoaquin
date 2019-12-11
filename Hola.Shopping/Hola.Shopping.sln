@@ -5,17 +5,23 @@ VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hola.Shopping.Api", "Hola.Shopping.Api.csproj", "{B2A04BDB-0815-4E16-88E9-A37873370331}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hola.Shopping.Api.Domain.Model", "..\Hola.Shopping.Api.Domain.Model\Hola.Shopping.Api.Domain.Model.csproj", "{6614517E-0FB8-4C13-9A0F-F71FB6AA6B16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hola.Shopping.Api.Domain.Model", "..\Hola.Shopping.Api.Domain.Model\Hola.Shopping.Api.Domain.Model.csproj", "{6614517E-0FB8-4C13-9A0F-F71FB6AA6B16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hola.Shopping.Api.Data.Contracts", "..\Hola.Shopping.Api.Data.Contracts\Hola.Shopping.Api.Data.Contracts.csproj", "{44006E5B-7203-47AB-ABF8-46A6888BDA1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hola.Shopping.Api.Data.Contracts", "..\Hola.Shopping.Api.Data.Contracts\Hola.Shopping.Api.Data.Contracts.csproj", "{44006E5B-7203-47AB-ABF8-46A6888BDA1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hola.Shopping.Api.Data.Implementation", "..\Hola.Shopping.Api.Data.Implementation\Hola.Shopping.Api.Data.Implementation.csproj", "{1C6F58CF-CC2B-409A-AEE9-EB07265DD6E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hola.Shopping.Api.Data.Implementation", "..\Hola.Shopping.Api.Data.Implementation\Hola.Shopping.Api.Data.Implementation.csproj", "{1C6F58CF-CC2B-409A-AEE9-EB07265DD6E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hola.Shopping.Api.Application.Contracts", "..\Hola.Shopping.Api.Application.Contracts\Hola.Shopping.Api.Application.Contracts.csproj", "{AD7FCA20-4F62-4105-B6B4-00A4D4B5485E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hola.Shopping.Api.Application.Contracts", "..\Hola.Shopping.Api.Application.Contracts\Hola.Shopping.Api.Application.Contracts.csproj", "{AD7FCA20-4F62-4105-B6B4-00A4D4B5485E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hola.Shopping.Api.Application.Dtos", "..\Hola.Shopping.Api.Application.Dtos\Hola.Shopping.Api.Application.Dtos.csproj", "{B509D60D-FC4E-4783-A373-E7C9220BE0E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hola.Shopping.Api.Application.Dtos", "..\Hola.Shopping.Api.Application.Dtos\Hola.Shopping.Api.Application.Dtos.csproj", "{B509D60D-FC4E-4783-A373-E7C9220BE0E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hola.Shopping.Api.Application.Implementation", "..\Hola.Shopping.Api.Application.Implementation\Hola.Shopping.Api.Application.Implementation.csproj", "{AC0BDF1D-A159-4E0B-A559-1887653619E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hola.Shopping.Api.Application.Implementation", "..\Hola.Shopping.Api.Application.Implementation\Hola.Shopping.Api.Application.Implementation.csproj", "{AC0BDF1D-A159-4E0B-A559-1887653619E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hola.Shopping.ApiTests", "..\Hola.Shopping.ApiTests\Hola.Shopping.ApiTests.csproj", "{C49DB0C5-107E-41DF-A74E-0252AA139AC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hola.Shopping.Api.Application.ImplementationTests", "..\Hola.Shopping.Api.Application.ImplementationTests\Hola.Shopping.Api.Application.ImplementationTests.csproj", "{A83530A9-EC80-48DB-A543-A273955FD1B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{531DA9C4-4191-43FC-9393-AAF1E340C20B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,9 +57,21 @@ Global
 		{AC0BDF1D-A159-4E0B-A559-1887653619E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC0BDF1D-A159-4E0B-A559-1887653619E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC0BDF1D-A159-4E0B-A559-1887653619E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C49DB0C5-107E-41DF-A74E-0252AA139AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C49DB0C5-107E-41DF-A74E-0252AA139AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C49DB0C5-107E-41DF-A74E-0252AA139AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C49DB0C5-107E-41DF-A74E-0252AA139AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A83530A9-EC80-48DB-A543-A273955FD1B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A83530A9-EC80-48DB-A543-A273955FD1B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A83530A9-EC80-48DB-A543-A273955FD1B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A83530A9-EC80-48DB-A543-A273955FD1B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C49DB0C5-107E-41DF-A74E-0252AA139AC0} = {531DA9C4-4191-43FC-9393-AAF1E340C20B}
+		{A83530A9-EC80-48DB-A543-A273955FD1B4} = {531DA9C4-4191-43FC-9393-AAF1E340C20B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AEA56D5B-9F29-49EA-99F8-CBF29E92265A}
