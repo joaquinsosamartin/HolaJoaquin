@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using AutoMapper;
 using AutoWrapper.Wrappers;
 using Hola.Shopping.Api.Application.Contracts.Services;
@@ -35,7 +32,18 @@ namespace Hola.Shopping.Api.Controllers
         {
             _logger.LogInformation("GetAllProducts");
             var productsDto = await _productService.GetAll();
-            return _mapper.Map<IList<ProductDto>, ApiResponse>(productsDto);
+            return new ApiResponse
+            {
+                Result = productsDto
+            };
+        }
+
+        [HttpPost]
+        [Route("getallpaged")]
+        public async Task<ApiResponse> GetProductsPaged(GetProductsPagedRequest request)
+        {
+            var productsDto = await _productService.GetPaged(_mapper.Map<GetProductsPagedRequest, ProductPagedDto>(request));
+            return new ApiResponse { Result = productsDto };
         }
 
         [HttpPost]
@@ -43,7 +51,7 @@ namespace Hola.Shopping.Api.Controllers
         public async Task<ApiResponse> InsertProduct([FromBody] ProductRequest request)
         {
             await Task.Run(() => _productService.Insert(_mapper.Map<ProductRequest, ProductDto>(request)));
-            return _mapper.Map<string, ApiResponse>(string.Empty);
+            return new ApiResponse();
         }
 
         [HttpPost]
@@ -51,7 +59,7 @@ namespace Hola.Shopping.Api.Controllers
         public async Task<ApiResponse> UpdateProduct([FromBody] ProductRequest request)
         {
             await _productService.Update(_mapper.Map<ProductRequest, ProductDto>(request));
-            return _mapper.Map<string, ApiResponse>(string.Empty);
+            return new ApiResponse();
         }
     }
 }

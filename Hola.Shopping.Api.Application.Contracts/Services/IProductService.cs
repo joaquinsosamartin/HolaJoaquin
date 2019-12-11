@@ -9,5 +9,6 @@ namespace Hola.Shopping.Api.Application.Contracts.Services
         Task<IList<ProductDto>> GetAll();
         Task<bool> Insert(ProductDto dto);
         Task<bool> Update(ProductDto dto);
+        Task<GenericCollectionResponse<IList<ProductDto>>> GetPaged(ProductPagedDto dto);
     }
 }

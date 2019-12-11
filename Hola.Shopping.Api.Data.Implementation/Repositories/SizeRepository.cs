@@ -25,21 +25,13 @@ namespace Hola.Shopping.Api.Data.Implementation.Repositories
         public async Task<Size> GetByNumericValue(int numericValue)
         {
             var specification = new SizeByNumericValueSpecification(numericValue);
-            var result = await _context.Sizes.FirstOrDefaultAsync(specification.ToExpression());
-
-            _context.Entry(result).State = EntityState.Unchanged;
-
-            return result;
+            return await _context.Sizes.FirstOrDefaultAsync(specification.ToExpression());
         }
 
         public async Task<Size> GetByStringValue(string value)
         {
             var specification = new SizeByStringSpecification(value);
-            var result = await _context.Sizes.FirstOrDefaultAsync(specification.ToExpression());
-
-            _context.Entry(result).State = EntityState.Unchanged;
-
-            return result;
+            return await _context.Sizes.FirstOrDefaultAsync(specification.ToExpression());
         }
 
         public async void Insert(Size size)
