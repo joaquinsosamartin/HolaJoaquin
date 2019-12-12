@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="brand_select">Búsqueda:</label>
+        <!-- <select class="form-control" name="" id="brand_select" [(ngModel)]="selectedBrand">
+          <option *ngFor="let brand of brands" [ngValue]="brand">{{brand}}</option>
+        </select> -->
+      </div>
+    </div>
+    <div class="col-md-9">
+
+      <div class="container">
+        <div class="row" >
+          <!-- | paginate: { itemsPerPage: 3, currentPage: page } -->
+          <div class="col-sm-4 mb-2" *ngFor="let product of products">
+            <div class="item">
+              <div class=" mb-r">
+                <!--Card-->
+                <div class="card card-cascade wider">
+                  <!--Card image-->
+                  <a [routerLink]="['/products/product', product.$key]">
+                    <div class="view overlay hm-white-slight">
+                      <img [src]="product.productImageUrl" class="img-fluid" alt="" width="360px" height="640px">
+                      <a>
+                        <div class="mask waves-effect waves-light" mdbRippleRadius></div>
+                      </a>
+                    </div>
+                  </a>
+                  <!--/.Card image-->
+                  <!--Card content-->
+                  <div class="card-body text-center no-padding">
+                    <!--Category & Title-->
+                    <a class="text-muted">
+                      <h5>{{ product.category }}</h5>
+                    </a>
+                    <p class="card-title">
+                      <strong>
+                        <a [routerLink]="['/products/product', product.$key]" routerLinkActive="router-link-active">{{
+                          product.name }}</a>
+                      </strong>
+                    </p>
+                    <!--Description-->
+                    <p class="card-text">{{ product.description }}
+                    </p>
+                    <!--Card footer-->
+                    <div class="card-footer">
+                      <span class="left"> {{ product.price }} €</span>
+                      <span class="right">
+                        <a placement="top" mdbTooltip="Add to Cart" container="body" (click)="addToCart(product)">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                      </span>
+                    </div>
+
+                  </div>
+                  <!--/.Card content-->
+
+                </div>
+                <!--/.Card-->
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Pagination -->
+        <div class="text-center mt-3">
+          <pagination-controls (pageChange)="page = $event"></pagination-controls>
+        </div>
+      </div>
+      <!--/.Card-->
+    </div>
+  </div>
+</div>

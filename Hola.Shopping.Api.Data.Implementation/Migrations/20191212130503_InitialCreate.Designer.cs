@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hola.Shopping.Api.Data.Implementation.Migrations
 {
     [DbContext(typeof(HolaShoppingContext))]
-    [Migration("20191210194827_InitialCreate")]
+    [Migration("20191212130503_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -118,13 +118,13 @@ namespace Hola.Shopping.Api.Data.Implementation.Migrations
                         .HasColumnType("DATETIME2");
 
                     b.Property<decimal>("GrossAmount")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<decimal>("Tax")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<decimal>("Total")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18, 2)");
 
                     b.HasKey("Id");
 
@@ -140,7 +140,7 @@ namespace Hola.Shopping.Api.Data.Implementation.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("DATETIME2");
@@ -149,10 +149,10 @@ namespace Hola.Shopping.Api.Data.Implementation.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("Tax")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<decimal>("TotalAmount")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18, 2)");
 
                     b.HasKey("Id");
 
@@ -189,8 +189,8 @@ namespace Hola.Shopping.Api.Data.Implementation.Migrations
                         .HasColumnType("nvarchar(200)")
                         .HasMaxLength(200);
 
-                    b.Property<decimal>("Prize")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<string>("Reference")
                         .IsRequired()

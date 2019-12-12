@@ -39,16 +39,18 @@ namespace Hola.Shopping.Api
             //        options.ClientSecret = googleAuthNSection["ClientSecret"];
             //    });
 
-            services.AddCors(options =>
-            {
-                options.AddPolicy("GooglePolicy", builder => builder
-                    //.WithOrigins(Configuration.GetValue<string>("GoogleClientPolicy"), "Access-Control-Allow-Origin", "Access-Control-Allow-Credentials")
-                    .AllowAnyOrigin()
-                    .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    //.AllowCredentials()
-                );
-            });
+            services.AddCors();
+
+            //options =>
+            //{
+            //options.AddPolicy("GooglePolicy", builder => builder
+            //    //.WithOrigins(Configuration.GetValue<string>("GoogleClientPolicy"), "Access-Control-Allow-Origin", "Access-Control-Allow-Credentials")
+            //    .AllowAnyOrigin()
+            //    .AllowAnyMethod()
+            //    .AllowAnyHeader()
+            //    //.AllowCredentials()
+            //);
+            //});
 
             services.AddControllers();
 
@@ -68,7 +70,10 @@ namespace Hola.Shopping.Api
 
             app.UseHttpsRedirection();
 
-            app.UseCors("GooglePolicy");
+            app.UseCors(builder =>
+                builder.WithOrigins("http://localhost:4200"));
+
+            //app.UseCors("GooglePolicy");
             //app.UseAuthentication();
 
             app.UseApiResponseAndExceptionWrapper(new AutoWrapperOptions

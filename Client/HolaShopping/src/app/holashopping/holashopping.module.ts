@@ -3,9 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HolashoppingRoutingModule } from './holashopping-routing.module';
 import { HolashoppingComponent } from './holashopping.component';
-// import { HeaderComponent, NotFoundComponent, SidebarComponent } from '../shared';
 import { MaterialModule } from '../material.module';
-import { ProductListComponent } from './components/public/product-list/product-list.component';
+import { ProductListComponent } from './components/public/product/product-list/product-list.component';
+import { HeaderComponent } from '../shared/components/header/header.component';
+import { NotFoundComponent } from '../shared/components/error/not-found.component';
+import { IProductService } from './services/product/iProductService';
+import { ProductService } from './services/product/productService';
 
 @NgModule({
     imports: [
@@ -17,17 +20,15 @@ import { ProductListComponent } from './components/public/product-list/product-l
         MaterialModule
     ],
     declarations: [
-        // NotFoundComponent,
+        NotFoundComponent,
         HolashoppingComponent,
         ProductListComponent,
-        // HeaderComponent,
-        // SidebarComponent,
+        HeaderComponent,
     ],
     exports: [
     ],
     providers: [
-        // { provide: ITechnologyService, useClass: TechnologyService },
-        // MasterViewModelResolver
+        {provide: IProductService, useClass: ProductService}
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

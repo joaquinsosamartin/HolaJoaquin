@@ -123,7 +123,7 @@ namespace Hola.Shopping.Api.Application.Implementation.Services
             product.Color = dto.Color;
             product.Id = dto.Id;
             product.Name = dto.Name;
-            product.Prize = dto.Prize;
+            product.Price = dto.Price;
         }
 
         private static Func<IQueryable<Product>, IOrderedQueryable<Product>> GetProductOrder(string sortParameter, int sortOrder)

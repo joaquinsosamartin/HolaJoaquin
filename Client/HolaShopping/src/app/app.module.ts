@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MessageService } from './holashopping/services/messageService';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { AppComponent } from './app.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    MessageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

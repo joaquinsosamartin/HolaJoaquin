@@ -47,11 +47,18 @@ namespace Hola.Shopping.Api.Data.Implementation
             modelBuilder.Entity<Invoice>(builder =>
             {
                 builder.Property(j => j.Date).IsRequired().HasColumnType("DATETIME2");
+                builder.Property(j => j.GrossAmount).IsRequired().HasColumnType("decimal(18, 2)");
+                builder.Property(j => j.Tax).IsRequired().HasColumnType("decimal(18, 2)");
+                builder.Property(j => j.Total).IsRequired().HasColumnType("decimal(18, 2)");
+
             });
 
             modelBuilder.Entity<Order>(builder =>
             {
                 builder.Property(j => j.Date).IsRequired().HasColumnType("DATETIME2");
+                builder.Property(j => j.Amount).IsRequired().HasColumnType("decimal(18, 2)");
+                builder.Property(j => j.Tax).IsRequired().HasColumnType("decimal(18, 2)");
+                builder.Property(j => j.TotalAmount).IsRequired().HasColumnType("decimal(18, 2)");
             });
 
             modelBuilder.Entity<Product>().Property(a => a.Name).IsRequired().HasMaxLength(200);
@@ -59,6 +66,7 @@ namespace Hola.Shopping.Api.Data.Implementation
             modelBuilder.Entity<Product>().Property(a => a.Description).IsRequired().HasColumnType("NVARCHAR(MAX)");
             modelBuilder.Entity<Product>().Property(a => a.Reference).IsRequired().HasMaxLength(50);
             modelBuilder.Entity<Product>().Property(a => a.Barcode128).HasColumnType("NVARCHAR(150)");
+            modelBuilder.Entity<Product>().Property(j => j.Price).IsRequired().HasColumnType("decimal(18, 2)");
 
             modelBuilder.Entity<Product>().HasOne(p => p.Size).WithMany(s => s.Products);
             

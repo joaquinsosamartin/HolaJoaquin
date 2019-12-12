@@ -8,7 +8,7 @@ namespace Hola.Shopping.Api.Application.Dtos
         public string Name { get; set; }
         public string Size { get; set; }
         public string Color { get; set; }
-        public decimal Prize { get; set; }
+        public decimal Price { get; set; }
         public string Description { get; set; }
         public string Reference { get; set; }
         public string Barcode128 { get; set; }

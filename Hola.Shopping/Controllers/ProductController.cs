@@ -5,6 +5,7 @@ using Hola.Shopping.Api.Application.Contracts.Services;
 using Hola.Shopping.Api.Application.Dtos;
 using Hola.Shopping.Api.Model;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -12,6 +13,7 @@ namespace Hola.Shopping.Api.Controllers
 {
     //[Authorize]
     [ApiController]
+    [EnableCors]
     [Route("[controller]")]
     public class ProductController : ControllerBase
     {

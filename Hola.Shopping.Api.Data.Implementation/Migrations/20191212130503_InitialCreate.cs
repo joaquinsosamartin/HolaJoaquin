@@ -84,7 +84,7 @@ namespace Hola.Shopping.Api.Data.Implementation.Migrations
                     Name = table.Column<string>(maxLength: 200, nullable: false),
                     SizeId = table.Column<Guid>(nullable: true),
                     Color = table.Column<string>(maxLength: 100, nullable: true),
-                    Prize = table.Column<decimal>(nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
                     Description = table.Column<string>(type: "NVARCHAR(MAX)", nullable: false),
                     Reference = table.Column<string>(maxLength: 50, nullable: false),
                     Barcode128 = table.Column<string>(type: "NVARCHAR(150)", nullable: true),
@@ -114,9 +114,9 @@ namespace Hola.Shopping.Api.Data.Implementation.Migrations
                 {
                     Id = table.Column<Guid>(nullable: false),
                     Date = table.Column<DateTime>(type: "DATETIME2", nullable: false),
-                    GrossAmount = table.Column<decimal>(nullable: false),
-                    Tax = table.Column<decimal>(nullable: false),
-                    Total = table.Column<decimal>(nullable: false),
+                    GrossAmount = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
+                    Tax = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
+                    Total = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
                     CustomerId = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
@@ -157,9 +157,9 @@ namespace Hola.Shopping.Api.Data.Implementation.Migrations
                 {
                     Id = table.Column<Guid>(nullable: false),
                     Date = table.Column<DateTime>(type: "DATETIME2", nullable: false),
-                    Amount = table.Column<decimal>(nullable: false),
-                    Tax = table.Column<decimal>(nullable: false),
-                    TotalAmount = table.Column<decimal>(nullable: false),
+                    Amount = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
+                    Tax = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
+                    TotalAmount = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
                     InvoiceId = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
